@@ -1,15 +1,7 @@
-html,body {
-  margin: 0px;
-  padding: 0px;
-  pointer-events: none;
+@media (prefers-color-scheme: dark) {
+  body { background: #333; color: white; }
 }
-#app {
- box-sizing: border-box;
- width: 380px;
- height: 380px;
- border-radius: 190px;
- border: 1px solid green;
- background: #fff;
- overflow: hidden;
- pointer-events: auto;
+
+@media (prefers-color-scheme: light) {
+  body { background: #ddd; color: black; }
 }

@@ -1,3 +1,10 @@
+const { contextBridge, ipcRender } = require('electron');
+
+contextBridge.exposeInMainWorld('darkMode', {
+  toggle: () => ipcRender.send('dark-mode:toggle'),
+  system: () => ipcRender.send('dark-mode:system')
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   const replaceText = (selector, text) => {
     const element = document.getElementById(selector);
